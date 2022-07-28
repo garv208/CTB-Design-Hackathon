@@ -33,7 +33,7 @@ Updating the design and re-running the test make the test pass.
 
 ![fali_2](https://user-images.githubusercontent.com/84724429/181506783-f0f6ff93-3333-4233-aee3-e8796e96da02.jpg)
 
-The design failed because of the absence of assigning of 30th input to the Output in **case**
+The design failed because of the absence of assigning of input port *inp30*  to ouput with the slection logic ``5'b01111: out = inp30;``
 
 ## Design Fix
 ![Pass](https://user-images.githubusercontent.com/84724429/181507824-16b694fc-9026-4561-9719-84654f7ce07b.jpg)
