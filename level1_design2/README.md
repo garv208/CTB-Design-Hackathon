@@ -78,4 +78,4 @@ For the design the logic should include ``next_state = SEQ_10;`` insteaded of  `
 The updated design is checked in as _fix.v
 sequence_1011.v
 ## Verification Strategy
-Direct Testing is implemented for verification, and for all the possible bug that can appear for the sequence to paper after every possible state is analized
+Direct Testing is implemented for verification, and for the sequence to appear after every possible state is analized
