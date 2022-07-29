@@ -17,7 +17,7 @@ async def test_seq_bug1(dut):
     clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
     cocotb.start_soon(clock.start())        # Start the clock
 
-    # Testing overlapping 
+    # test when sequence appear after ist state 
     # reset
     await FallingEdge(dut.clk)
     dut.reset.value = 1
@@ -32,7 +32,7 @@ async def test_seq_bug1(dut):
     await FallingEdge(dut.clk)
     dut.inp_bit.value = 1        
     await FallingEdge(dut.clk)
-    dut.inp_bit.value = 1        # state4
+    dut.inp_bit.value = 1         # state4
     await FallingEdge(dut.clk)
     dut._log.info(f'input={dut.inp_bit.value}  DUT={int(dut.seq_seen.value)}')
     assert dut.seq_seen.value == 1, f"Directed test failed with: expected output {1} and output {dut.seq_seen.value}"
@@ -65,7 +65,7 @@ async def test_seq_bug2(dut):
     await FallingEdge(dut.clk)       
     dut._log.info(f'input={dut.inp_bit.value}  DUT={int(dut.seq_seen.value)}')
     assert dut.seq_seen.value == 1, f"Directed test failed with: expected output {1} and output {dut.seq_seen.value}"
-
+# test when sequence appear after 3rd state 
 @cocotb.test()
 async def test_seq_bug3(dut):
     clock = Clock(dut.clk, 10, units="us")  # Create a 10us period clock on port clk
@@ -82,11 +82,11 @@ async def test_seq_bug3(dut):
     await FallingEdge(dut.clk)
     dut.inp_bit.value = 1       
     await FallingEdge(dut.clk)
-    dut.inp_bit.value = 0        #state4
+    dut.inp_bit.value = 0        
     await FallingEdge(dut.clk)       
     dut.inp_bit.value = 1    
     await FallingEdge(dut.clk)
-    dut.inp_bit.value = 1       
+    dut.inp_bit.value = 1        #state4
     await FallingEdge(dut.clk)      
     dut._log.info(f'input={dut.inp_bit.value}  DUT={int(dut.seq_seen.value)}')
     assert dut.seq_seen.value == 1, f"Directed test failed with: expected output {1} and output {dut.seq_seen.value}"
