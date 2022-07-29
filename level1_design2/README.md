@@ -22,8 +22,6 @@ The following error is seen:
 - Expected Output: seq_seen = 1
 - Observed Output in the DUT dut.seq_seen.value = 1
 
-Output matches for the above inputs proving that for the given input the design is buggy
-
 ### Test Two
 - Test Inputs: [0, 1, 0, 1, 1, 0, 1, 1]
 - Expected Output: seq_seen = 1
@@ -33,7 +31,8 @@ Output matches for the above inputs proving that for the given input the design 
 - Test Inputs: [0, 1, 0, 1, 0, 1, 1]
 - Expected Output: seq_seen = 1
 - Observed Output in the DUT dut.seq_seen.value = 0
-Output mismatches for the above inputs hence design consist of bug
+
+Output mismatches for the above inputs hence design consist of bugs.
 
 ![failed_2](https://user-images.githubusercontent.com/84724429/181591985-1bfabe91-9838-40a7-9c1c-aa641f84d034.jpg)
 
@@ -78,4 +77,4 @@ For the design the logic should include ``next_state = SEQ_10;`` insteaded of  `
 The updated design is checked in as _fix.v
 sequence_1011.v
 ## Verification Strategy
-Direct Testing is implemented for verification, and for the sequence to appear after every possible state is analized
+Direct Testing is implemented for verification, and Testcases are taken in which the sequence *1011* appear after the ever possible state in which the designed FSM can exist. 
