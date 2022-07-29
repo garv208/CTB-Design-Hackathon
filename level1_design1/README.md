@@ -29,20 +29,17 @@ Based on the above test input and analyzing the design, we see the following.
  5'b01101: out = inp13;             
 ```
 For the design, the logic should be ``5'b01100: out = inp12`` instead of ``5'b01101: out = inp12`` as in the design code.
-Updating the design and re-running the test make the test pass.
+Updating the design and re-running the test.
 
 ![fali_2](https://user-images.githubusercontent.com/84724429/181506783-f0f6ff93-3333-4233-aee3-e8796e96da02.jpg)
 
-The design failed because of the absence of assigning of input port *inp30*  to ouput with the slection logic ``5'b01111: out = inp30;``
+The design failed because of the absence of assigning of input port *inp30*  to ouput port with the slection logic ``5'b01111: out = inp30;``
 
 ## Design Fix
 ![Pass](https://user-images.githubusercontent.com/84724429/181507824-16b694fc-9026-4561-9719-84654f7ce07b.jpg)
 
-The updated design is checked in as adder_fix.v
+The updated design is checked in as mux_fix.v
 
 ## Verification Strategy
 Randomized Testing is implemented for verification, and random 3-bit values are assigned to the inputs (inp0 to inp30).
-Then for different values of the selection line, the Output is checked. For eg
-```
-in0 = random.randint(0, 3)
-```
+Then for different values of the selection line, the Output is checked.
