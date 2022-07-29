@@ -74,7 +74,7 @@ For the design the logic should include ``next_state = SEQ_10;`` insteaded of  `
 
 ![fail](https://user-images.githubusercontent.com/84724429/181592618-6d8237b7-39c4-45cc-88c0-b0ad8b119807.jpg)
 
-The updated design is checked in as _fix.v
-sequence_1011.v
+The updated design is checked in as seq_detect_1011_fix.v
+
 ## Verification Strategy
 Direct Testing is implemented for verification, and Testcases are taken in which the sequence *1011* appear after the ever possible state in which the designed FSM can exist. 
