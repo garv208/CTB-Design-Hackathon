@@ -34,7 +34,7 @@ The following error is seen:
 
 Output mismatches for the above inputs hence design consist of bugs.
 
-![failed_2](https://user-images.githubusercontent.com/84724429/181591985-1bfabe91-9838-40a7-9c1c-aa641f84d034.jpg)
+![failed_2](https://user-images.githubusercontent.com/84724429/181702180-4906e4c9-0287-43e3-8971-ee02ddb61936.jpg)
 
 
 ## Design Bug
@@ -72,7 +72,7 @@ SEQ_101:
 For the design the logic should include ``next_state = SEQ_10;`` insteaded of  ``next_state = IDLE;``
 ## Design Fix
 
-![fail](https://user-images.githubusercontent.com/84724429/181592618-6d8237b7-39c4-45cc-88c0-b0ad8b119807.jpg)
+![pass_2](https://user-images.githubusercontent.com/84724429/181702272-37061c64-521e-484a-beb2-76e9fd63028f.jpg)
 
 The updated design is checked in as seq_detect_1011_fix.v
 
