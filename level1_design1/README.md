@@ -3,7 +3,7 @@
 The verification environment is set up using [Vyoma's UpTickPro](https://vyomasystems.com) provided for the hackathon.
 
 *Make sure to include the Gitpod id in the screenshot*
-![snap_gitpod](https://user-images.githubusercontent.com/84724429/181510175-e2c15e62-0d13-48c5-8bc6-54cdd5919dcb.jpg)
+![Homepage](https://user-images.githubusercontent.com/84724429/181875766-d7eb2fb8-7533-4c73-8611-de5b3f0a7e28.jpg)
 ## Verification Environment
 
 The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. The test drives inputs to the Design Under Test (mux module here), which takes in 31 2-bits inputs, clock, and 5-bits selection line and gives 2-bits Output *out*. 
