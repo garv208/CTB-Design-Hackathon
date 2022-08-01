@@ -72,3 +72,4 @@ Based on the above test input and analyzing the design, we see the following.
 
 - Two 7-bit values of the operand ([0110011, 0010011]) was used  in each test case for a specific func7 with all the func3 value corresponding to that func7 value, these two value of operands were taken along with all the possible combinations of remaining bits.
 
+
